@@ -21,3 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('authors/', include('authors.urls'))
 ]
+
+
+"""
+1. http://localhost:8000/authors/
+
+
+"""

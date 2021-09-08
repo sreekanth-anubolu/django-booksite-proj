@@ -11,26 +11,17 @@
 <body>
 
 <div class="container">
-  <h2>Bordered Table</h2>
+  <h2>Create Author</h2>
+  
+  
+  <form action="/authors/create-author/" method="POST">
+    {% csrf_token %}
+    
+    {{ form }}
 
-  <p>Authors List</p>
-
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for auth in authors %}
-      <tr>
-        <td>{{ auth.first_name }}</td>
-        <td>{{ auth.last_name }}</td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
+    <input type="submit">
+  </form>
+  
 </div>
 
 </body>
